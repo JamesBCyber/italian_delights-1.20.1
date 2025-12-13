@@ -35,7 +35,6 @@ public class ItalianDelightMain
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public static ArrayList<Item> creativeItems = new ArrayList<>();
     // Old way of making Creative Tab
 //    public static final CreativeModeTab CREATIVE_TAB = new CreativeModeTab(ItalianDelightMain.MODID)
 //    {
@@ -54,6 +53,10 @@ public class ItalianDelightMain
 
         // Register the Deferred Register to the mod event bus so blocks get registered
         BlockInit.BLOCKS.register(modEventBus);
+
+        // Register Fluids for Brewin and Chewin brews
+        FluidInit.FLUID_TYPES.register(modEventBus);
+        FluidInit.FLUIDS.register(modEventBus);
 
         // Register the Deferred Register to the mod event bus so items get registered
         ItemInit.ITEMS.register(modEventBus);

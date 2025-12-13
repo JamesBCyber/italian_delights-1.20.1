@@ -136,24 +136,6 @@ public class BlockInit {
         return ItemInit.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
-    // creative registry
-    private static RegistryObject<Item> addCreative(RegistryObject<Item> blockItem) {
-        ItalianDelightMain.creativeItems.add(blockItem.get());
-
-        String fileName = "FUCKING WORK.md";
-        Path filePath = Path.of(fileName);
-        try {
-            Files.writeString(filePath,
-                    String.format("registered %s item %n", blockItem.getKey()),
-                    StandardOpenOption.CREATE,
-                    StandardOpenOption.APPEND);
-            System.out.println("Content appended to " + filePath.toAbsolutePath());
-        } catch (IOException e) {
-            System.err.println("Error appending to file: " + e.getMessage());
-        }
-
-        return blockItem;
-    }
 
     private static ButtonBlock woodenButton(BlockSetType p_278239_, FeatureFlag... p_278229_) {
         BlockBehaviour.Properties blockbehaviour$properties = BlockBehaviour.Properties.of().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY);

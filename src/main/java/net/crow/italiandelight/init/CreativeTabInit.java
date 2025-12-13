@@ -19,13 +19,21 @@ public class CreativeTabInit {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(BlockInit.WOODEN_OVEN.get()))
                     .title(Component.translatable("creative.italian_delight"))
                     .displayItems((pParameters, pOutput) -> {
-//                        pOutput.accept(targetItem);
 
                         pOutput.accept(ItemInit.GRAPES.get());
                         pOutput.accept(ItemInit.OLIVES.get());
                         pOutput.accept(ItemInit.GRAPE_SEEDS.get());
                         pOutput.accept(ItemInit.HERB_LEAVES.get());
                         pOutput.accept(ItemInit.BERRY_DELIGHT.get());
+
+                        pOutput.accept(ItemInit.GLOWBERRY_WINE.get());
+                        pOutput.accept(ItemInit.ROSE_WINE.get());
+                        pOutput.accept(ItemInit.HELLHOUND_WINE.get());
+                        pOutput.accept(ItemInit.DRAGONBORN_WINE.get());
+                        pOutput.accept(ItemInit.HASTING_WINE.get());
+                        pOutput.accept(ItemInit.SWEETBERRY_WINE.get());
+                        pOutput.accept(ItemInit.SPUMANTE.get());
+
                         pOutput.accept(ItemInit.PASTA_AL_TOMATO.get());
                         pOutput.accept(ItemInit.PASTA_AL_PESTO.get());
                         pOutput.accept(ItemInit.RISOTTO_AL_SUGO.get());

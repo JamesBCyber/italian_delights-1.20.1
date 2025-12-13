@@ -46,14 +46,15 @@ public class ItemInit {
     public static final RegistryObject<Item> GRAPE_SEEDS = ITEMS.register("grape_seeds", () -> new ItemNameBlockItem(BlockInit.GRAPE_CROP.get(), basicItem()));
     public static final RegistryObject<Item> HERB_LEAVES = ITEMS.register("herb_leaves", () -> new ItemNameBlockItem(BlockInit.HERB_CROP.get(), foodItem(FoodValues.HERBS)));
 
+
     // Wines
-//    public static final RegistryObject<Item> GLOWBERRY_WINE = ITEMS.register("glowberry_wine", () -> new BoozeItem(1, 4, foodItem(FoodValues.GLOWBERRY_WINE)));
-//    public static final RegistryObject<Item> ROSE_WINE = ITEMS.register("rose_wine", () -> new BoozeItem(1, 3, foodItem(FoodValues.ROSE_WINE)));
-//    public static final RegistryObject<Item> HELLHOUND_WINE = ITEMS.register("hellhound_wine", () -> new BoozeItem(2, 5, foodItem(FoodValues.HELLHOUND_WINE)));
-//    public static final RegistryObject<Item> DRAGONBORN_WINE = ITEMS.register("dragonborn_wine", () -> new BoozeItem(2, 5, foodItem(FoodValues.DRAGONBORN_WINE)));
-//    public static final RegistryObject<Item> HASTING_WINE = ITEMS.register("hasting_wine", () -> new BoozeItem(2, 5, foodItem(FoodValues.HASTING_WINE)));
-//    public static final RegistryObject<Item> SWEETBERRY_WINE = ITEMS.register("sweetberry_wine", () -> new BoozeItem(1, 5, foodItem(FoodValues.SWEETBERRY_WINE)));
-//    public static final RegistryObject<Item> SPUMANTE = ITEMS.register("spumante", () -> new BoozeItem(1, 3,foodItem(FoodValues.SPUMANTE)));
+    public static final RegistryObject<Item> GLOWBERRY_WINE = ITEMS.register("glowberry_wine", () -> new BoozeItem(FluidInit.GLOWBERRY_WINE.get(), foodItem(FoodValues.GLOWBERRY_WINE)));
+    public static final RegistryObject<Item> ROSE_WINE = ITEMS.register("rose_wine", () -> new BoozeItem(FluidInit.ROSE_WINE.get(), foodItem(FoodValues.ROSE_WINE)));
+    public static final RegistryObject<Item> HELLHOUND_WINE = ITEMS.register("hellhound_wine", () -> new BoozeItem(FluidInit.HELLHOUND_WINE.get(), foodItem(FoodValues.HELLHOUND_WINE)));
+    public static final RegistryObject<Item> DRAGONBORN_WINE = ITEMS.register("dragonborn_wine", () -> new BoozeItem(FluidInit.DRAGONBORN_WINE.get(), foodItem(FoodValues.DRAGONBORN_WINE)));
+    public static final RegistryObject<Item> HASTING_WINE = ITEMS.register("hasting_wine", () -> new BoozeItem(FluidInit.HASTING_WINE.get(), foodItem(FoodValues.HASTING_WINE)));
+    public static final RegistryObject<Item> SWEETBERRY_WINE = ITEMS.register("sweetberry_wine", () -> new BoozeItem(FluidInit.SWEETBERRY_WINE.get(), foodItem(FoodValues.SWEETBERRY_WINE)));
+    public static final RegistryObject<Item> SPUMANTE = ITEMS.register("spumante", () -> new BoozeItem(FluidInit.SPUMANTE.get(),foodItem(FoodValues.SPUMANTE)));
 
     // Dishes
     public static final RegistryObject<Item> BERRY_DELIGHT = ITEMS.register("berry_delight", () -> new Item(foodItem(FoodValues.BERRY_DELIGHT)));
@@ -117,22 +118,4 @@ public class ItemInit {
     public static final RegistryObject<Item> WILD_HERBS = ITEMS.register("wild_herbs", () -> {
         return new BlockItem(BlockInit.WILD_HERBS.get(), basicItem());});
 
-    // creative registry
-    private static RegistryObject<Item> addCreative(RegistryObject<Item> item) {
-        ItalianDelightMain.creativeItems.add(item.get());
-
-        String fileName = "FUCKING WORK.md";
-        Path filePath = Path.of(fileName);
-        try {
-            Files.writeString(filePath,
-                    String.format("registered %s item %n", item.getKey()),
-                    StandardOpenOption.CREATE,
-                    StandardOpenOption.APPEND);
-            System.out.println("Content appended to " + filePath.toAbsolutePath());
-        } catch (IOException e) {
-            System.err.println("Error appending to file: " + e.getMessage());
-        }
-
-        return item;
-    }
 }
