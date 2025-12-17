@@ -73,11 +73,6 @@ public class ItalianDelightMain
         // Register the Deferred Register to the mod event bus so menus get registered
         MenuInit.MENUS.register(modEventBus);
 
-        // Register the Deferred Register to the mod event bus so configs get registered
-        ModConfiguredFeatures.register(modEventBus);
-
-        //Register the Deferred Register to the mod event bus so place features get registered
-        ModPlacedFeatures.register(modEventBus);
 
         CreativeTabInit.CREATIVE_MODE_TABS.register(modEventBus);
 
