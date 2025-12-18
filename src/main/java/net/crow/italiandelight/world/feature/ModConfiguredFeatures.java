@@ -29,7 +29,7 @@ public class ModConfiguredFeatures {
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         register(context, OLIVE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(BlockInit.OLIVE_LOG.get()),
-                new StraightTrunkPlacer(5, 4, 3),
+                new StraightTrunkPlacer(4, 2, 1),
 
                 BlockStateProvider.simple(BlockInit.OLIVE_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2), 3),

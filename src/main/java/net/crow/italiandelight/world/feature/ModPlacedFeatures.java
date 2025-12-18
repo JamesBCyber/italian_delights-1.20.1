@@ -24,7 +24,7 @@ public class ModPlacedFeatures {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, OLIVE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OLIVE_KEY),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.25f, 1),
                         BlockInit.OLIVE_SAPLING.get()));
     }
 
