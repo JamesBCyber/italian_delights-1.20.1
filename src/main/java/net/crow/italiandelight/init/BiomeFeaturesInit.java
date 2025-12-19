@@ -11,9 +11,9 @@ import vectorwing.farmersdelight.common.world.feature.WildCropFeature;
 import vectorwing.farmersdelight.common.world.feature.WildRiceFeature;
 
 public class BiomeFeaturesInit {
-
-        public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, ItalianDelightMain.MODID);
-
-        public static final RegistryObject<Feature<WildCropConfiguration>> WILD_CROP = FEATURES.register("wild_crop", () -> new WildCropFeature(WildCropConfiguration.CODEC));
+        // Duplicate call to Farmers Delight Functionality
+//        public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, ItalianDelightMain.MODID);
+//
+//        public static final RegistryObject<Feature<WildCropConfiguration>> WILD_CROP = FEATURES.register("wild_crop", () -> new WildCropFeature(WildCropConfiguration.CODEC));
 
 }

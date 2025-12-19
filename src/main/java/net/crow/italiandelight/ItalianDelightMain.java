@@ -62,7 +62,7 @@ public class ItalianDelightMain
         ItemInit.ITEMS.register(modEventBus);
 
         // Register the Deferred Register to the mod event bus so placed features get registered
-        BiomeFeaturesInit.FEATURES.register(modEventBus);
+//        BiomeFeaturesInit.FEATURES.register(modEventBus);
 
         // Register the Deferred Register to the mod event bus so Biome Mods get registered
         BiomeInit.BIOME_MODIFIER_SERIALIZERS.register(modEventBus);
